@@ -100,4 +100,23 @@ remember(
 )
 
 Path(
-    "
+    "widget_log.json"
+).write_text(
+    json.dumps(
+        session,
+        indent=2
+    )
+)
+
+print(session["id"])
+
+for item in session["items"]:
+    print(
+        item["name"]
+    )
+
+print(account.address)
+
+print(tx["gas"])
+
+print("Execution complete")
